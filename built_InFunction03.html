@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let TextIn = prompt()
+    let TextArr = TextIn.split("")      //câu lệnh split tách string thành từng pt trong array
+    for (let i in TextArr) {
+        if (TextArr[i] === TextArr[i].toUpperCase()) {
+            TextArr[i] = TextArr[i].toLowerCase()
+        } else {
+            TextArr[i] = TextArr[i].toUpperCase()
+        }
+    }
+    TextIn = TextArr.join("").toString()
+    document.write(TextIn)
+</script>
+</body>
+</html>

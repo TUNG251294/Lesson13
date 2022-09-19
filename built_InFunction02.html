@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let NumIn = prompt("Enter numeric string");
+    let NumArr = NumIn.split("");
+    for (let i = 0; i < NumArr.length; i++) {
+        if (NumArr[i] % 2 === 0) {
+            if (NumArr[i + 1] % 2 === 0) {
+                NumArr.splice(i + 1, 0, "-");   //splice(vị trí thêm pt mới, số pt deleted, pt thêm vào)
+                i++
+            }            //k có i++ vẫn đúng, i++ do trường hợp này tăng 1 phần tử "-"
+        }
+    }
+    document.write(NumArr.join());      //join thêm kí tự phân cách vào giữa 2 phần tử
+</script>
+</body>
+</html>

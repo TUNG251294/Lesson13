@@ -17,13 +17,15 @@
 
     function search() {
         let EngIn = document.getElementById("input").value
+        let result = null;
         for (let i in Englist) {
             if (Englist[i] === EngIn) {
-                document.getElementById("result").innerHTML = Vietlist[i];
+                result = Vietlist[i];
                 break;
             } //phải có break thoát khỏi vòng lặp khi tìm thấy kq đúng
-            else document.getElementById("result").innerText = "Result not found"
+            else result = "Result not found"
         }
+        document.getElementById("result").innerHTML = result;
     }
 </script>
 </body>
