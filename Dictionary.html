@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập từ tiếng Anh: <input type="text" id="input"></label>
+<button type="button" onclick="search()">Search</button>
+<p id="result"></p>
+
+<script>
+    let Englist = ["banana", "tomato", "potato", "chilli"];
+    Englist = Englist.sort() // sắp xếp phần tử theo Alphabet
+    // console.log(English)
+    let Vietlist = ["chuối", "ớt", "khoai tây", "cà chua"];
+
+    function search() {
+        let EngIn = document.getElementById("input").value
+        for (let i in Englist) {
+            if (Englist[i] === EngIn) {
+                document.getElementById("result").innerHTML = Vietlist[i];
+                break;
+            } //phải có break thoát khỏi vòng lặp khi tìm thấy kq đúng
+            else document.getElementById("result").innerText = "Result not found"
+        }
+    }
+</script>
+</body>
+</html>
