@@ -7,7 +7,7 @@
 <body>
 <script>
     let NumIn = prompt("Enter numeric string");
-    let NumArr = NumIn.split("");
+    let NumArr = NumIn.split("");               //string.split() phân tách 1 chuỗi thành 1 mảng dữ liệu dựa vào các kí tự phân cách trong chuỗi
     for (let i = 0; i < NumArr.length; i++) {
         if (NumArr[i] % 2 === 0) {
             if (NumArr[i + 1] % 2 === 0) {
